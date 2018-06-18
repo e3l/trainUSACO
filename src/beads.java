@@ -26,7 +26,7 @@ public class beads {
         int maxcount = 0;
 
         // We iterate through all the spaces in the necklace, to see which gives us the largest amount of beads.
-        for (int i = 0; i < beads.length; i++) {
+        for (int i = 0; i < numbeads; i++) {
             //Reset Scanner, stop, and count
             count = 0;
             scanner = i - 1;
@@ -49,7 +49,7 @@ public class beads {
                     count++;
                     scanner--;
                 } else {
-                    stop = true;;
+                    stop = true;
                 }
 
                 // If we are looking at the 'negative' bead, we go around the  necklace and look at the end bead
@@ -58,6 +58,7 @@ public class beads {
                 }
             }
 
+            System.out.println(count);
             // Reset Scanner, stop, and color for count forwards
             scanner = i;
             if (scanner > 28) {
